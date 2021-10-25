@@ -1,0 +1,23 @@
+<h1>Tweets#new</h1>
+<p>Find me in app/views/tweets/new.html.erb</p>
+<h3>新規Tweet</h3>
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= f.label :about %>
+    <%= f.text_field :about, :size => 140 %>
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 140 %> 
+  </div>
+  <div class="field">
+  <%= f.label :address %>
+  <%= f.text_field :address, :size => 140 %>
+</div>
+<div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <%= f.submit "Tweetする" %>
+<% end %>
+<%= link_to "Tweet一覧に戻る", tweets_path %>
